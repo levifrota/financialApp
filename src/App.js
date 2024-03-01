@@ -9,6 +9,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import Main from './pages/main/index.js';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -18,7 +19,7 @@ const App = () => {
   };
 
   return (
-    <View style={{padding: 10}}>
+    <View style={{ padding: 10 }}>
       <Text
         style={{
           fontSize: 22,
@@ -42,13 +43,13 @@ const App = () => {
 
       <FlatList
         data={[
-          {key: 'Alimentação: $200'},
-          {key: 'Combustível: $12'},
-          {key: 'Aluguel: $120'},
-          {key: 'Lazer: $250'},
-          {key: 'Outros: $1200'},
+          { key: 'Alimentação: $200' },
+          { key: 'Combustível: $12' },
+          { key: 'Aluguel: $120' },
+          { key: 'Lazer: $250' },
+          { key: 'Outros: $1200' },
         ]}
-        renderItem={({item}) => <Text>{item.key}</Text>}
+        renderItem={({ item }) => <Text>{item.key}</Text>}
       />
       <Text
         style={{
@@ -62,12 +63,14 @@ const App = () => {
 
       <FlatList
         data={[
-          {key: 'Padaria Asa Branca: $10'},
-          {key: 'Supermercado Isadora: $190'},
-          {key: 'Posto Ipiranga: $190'},
+          { key: 'Padaria Asa Branca: $10' },
+          { key: 'Supermercado Isadora: $190' },
+          { key: 'Posto Ipiranga: $190' },
         ]}
-        renderItem={({item}) => <Text>{item.key}</Text>}
+        renderItem={({ item }) => <Text>{item.key}</Text>}
       />
+
+      <Main />
     </View>
   );
 };
