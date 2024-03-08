@@ -1,29 +1,23 @@
-import { View, StyleSheet, Button } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+import { View, TextInput, Button, StyleSheet } from 'react-native';
 import React from 'react';
 
-import EntryLabel from '../../components/BalanceLabel/BalanceLabel';
-import EntrySummary from '../../components/EntrySummary/EntrySummary';
-import EntryList from '../../components/EntryList/EntryList';
+import BalanceLabel from '../../components/BalanceLabel/BalanceLabel';
 
-export default function Report() {
+export default function NewEntry() {
   return (
-    <View>
-      <EntryLabel />
-      <View>
-        <Picker>
-          <Picker.Item label="Todas as Categorias" />
-        </Picker>
-        <Picker>
-          <Picker.Item label="Últimos 7 dias" />
-        </Picker>
-      </View>
-      <EntrySummary />
-      <EntryList />
+    <View style={styles.container}>
+      <BalanceLabel />
 
       <View>
-        <Button title="Salvar" />
-        <Button title="Fechar" />
+        <TextInput style={styles.input} />
+        <TextInput style={styles.input} />
+        <Button title="GPS" />
+        <Button title="Câmera" />
+      </View>
+
+      <View>
+        <Button title="Adicionar" />
+        <Button title="Cancelar" />
       </View>
     </View>
   );
@@ -32,5 +26,10 @@ export default function Report() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 10,
+  },
+  input: {
+    borderColor: '#000',
+    borderWidth: 1,
   },
 });
