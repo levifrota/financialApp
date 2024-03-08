@@ -1,19 +1,8 @@
 import React from 'react';
-import {
-  Button,
-  FlatList,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { Button, FlatList, StyleSheet, Text, View } from 'react-native';
 import Main from './pages/main/index.js';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
   const addEntry = () => {
     alert('adaf');
   };
