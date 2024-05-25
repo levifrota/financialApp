@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import Routes from './routes';
 
 const App = () => {

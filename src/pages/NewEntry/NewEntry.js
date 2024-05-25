@@ -3,10 +3,12 @@ import React from 'react';
 
 import BalanceLabel from '../../components/BalanceLabel/BalanceLabel';
 
-export default function NewEntry() {
+export default function NewEntry({ navigation }) {
+  const currentBalance = 2065.11;
+
   return (
     <View style={styles.container}>
-      <BalanceLabel />
+      <BalanceLabel currentBalance={currentBalance} />
 
       <View>
         <TextInput style={styles.input} />
@@ -17,7 +19,7 @@ export default function NewEntry() {
 
       <View>
         <Button title="Adicionar" />
-        <Button title="Cancelar" />
+        <Button title="Cancelar" onPress={() => navigation.goBack()} />
       </View>
     </View>
   );

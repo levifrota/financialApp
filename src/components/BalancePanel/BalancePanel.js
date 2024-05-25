@@ -11,7 +11,7 @@ const BalancePanel = () => {
     <View style={styles.container}>
       <BalancePanelLabel />
       <BalancePanelChart />
-      <Button onPress={addEntry} title="Adicionar" />
+      {/* <Button onPress={addEntry} title="Adicionar" /> */}
     </View>
   );
 };

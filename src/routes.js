@@ -1,4 +1,9 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { useColorScheme } from 'react-native';
+import {
+  NavigationContainer,
+  DefaultTheme,
+  DarkTheme,
+} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 const Stack = createNativeStackNavigator();
@@ -9,7 +14,7 @@ import Report from './pages/Report/Report.js';
 
 const StackScreens = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Main" component={Main} />
       <Stack.Screen name="NewEntry" component={NewEntry} />
       <Stack.Screen name="Report" component={Report} />
@@ -17,12 +22,11 @@ const StackScreens = () => {
   );
 };
 
-const Routes = () => {
+export default () => {
+  const scheme = useColorScheme();
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
       <StackScreens />
     </NavigationContainer>
   );
 };
-
-export default Routes;
