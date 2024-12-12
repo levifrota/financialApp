@@ -25,7 +25,7 @@ const StackScreens = () => {
 export default () => {
   const scheme = useColorScheme();
   return (
-    <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <NavigationContainer>
       <StackScreens />
     </NavigationContainer>
   );

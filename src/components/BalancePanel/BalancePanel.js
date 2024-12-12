@@ -3,22 +3,22 @@ import React from 'react';
 import BalancePanelChart from './BalancePanelChart';
 import BalancePanelLabel from './BalancePanelLabel';
 
+import LinearGradient from 'react-native-linear-gradient';
+import Colors from '../../styles/colors';
+
 const BalancePanel = () => {
-  const addEntry = () => {
-    alert('teste');
-  };
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={[Colors.violet, Colors.blue]}
+      style={styles.container}>
       <BalancePanelLabel />
       <BalancePanelChart />
-      {/* <Button onPress={addEntry} title="Adicionar" /> */}
-    </View>
+    </LinearGradient>
   );
 };
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    padding: 10,
+    // padding: 10,
   },
 });
 
